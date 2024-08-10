@@ -7,7 +7,11 @@ def disply_stock():
    print("current classroom :")
    for item,quantity in classroom_stock.items():
       print(f"{item}:{quantity}")
-#adding marker to the stock
-
 disply_stock()
+def add_item(item,quantity):
+   if item in classroom_stocks:
+      classroom_stock[item]+=quantity
+   else:
+      classroom_stock[item]=quantity
+add_item(item,quantity)
 
